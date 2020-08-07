@@ -70,7 +70,7 @@ else if ((whichSym === false) && (whichNum=== false) && (whichLow === true) && (
     }
 }
 else if ((whichLow === false) && (whichUpp === true)&&(whichSym === false) && (whichNum === false) ) {
-    for (i = 0; i < charLength; i++) {
+    for (i = 0; i < passwordLength; i++) {
         let character = Math.floor(Math.random() * uppercase.length);
         newpassword += uppercase.charAt(character, character + 1);
     }
