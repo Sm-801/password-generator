@@ -4,6 +4,7 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+  console.log ('password');
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -22,7 +23,7 @@ generateBtn.addEventListener("click", writePassword);
 
 let passwordLength = prompt("Pick a number between 8 and 128");{
 
-let newpassword = "";
+let npassword= "";
 
 //B. Symbols to included in the password 
     //-lowercase letters
@@ -57,79 +58,79 @@ let whichNum= "0123456789";
 let totalPackage= uppercase + lowercase + symbols + numbers;
 if ((whichLow === true) && (whichUpp === true)&& (whichSym === true) && (whichNum === true) ) {
     for (i = 0; i < passwordLength; i++) { let character = Math.floor(Math.random() * totalPackage.length);
-        newpassword += totalPackage.charAt(character, character + 1);
+        npassword += totalPackage.charAt(character, character + 1);
     }
 }
 else if ((whichSym === false) && (whichNum=== false) && (whichLow === true) && (whichUpp === false)) {
     for (i = 0; i < passwordLength; i++) { let character = Math.floor(Math.random() * lowercase.length);
-        newpassword += lowercase.charAt(character, character + 1);
+        npassword += lowercase.charAt(character, character + 1);
     }
 }
 else if ((whichLow === false) && (whichUpp === true)&&(whichSym === false) && (whichNum === false) ) {
     for (i = 0; i < passwordLength; i++) { let character = Math.floor(Math.random() * uppercase.length);
-        newpassword += uppercase.charAt(character, character + 1);
+        npassword += uppercase.charAt(character, character + 1);
     }
 }
 else if ((whichSym === true) && (whichNum === false) && (whichLow === false) && (whichUpp === false)) {
     for (i = 0; i < passwordLength; i++) { let character = Math.floor(Math.random() * symbols.length);
-        newpassword += symbols.charAt(character, character + 1);
+        npassword += symbols.charAt(character, character + 1);
     }
 }
 else if ((whichSym === false) && (whichLow === false) && (whichUpp === false)&& (whichNum === true)) {
     for (i = 0; i < passwordLength; i++) { let character = Math.floor(Math.random() * numbers.length);
-        newpassword += numbers.charAt(character, character + 1);
+        npassword += numbers.charAt(character, character + 1);
     }
 }
 else if ((whichSym === false) && (whichNum === true) && (whichLow === true) && (whichUpp === true)) {
     for (i = 0; i < passwordLength; i++) { let character = Math.floor(Math.random() * nlu.length);
-        newpassword += nlu.charAt(character, character + 1);
+        npassword += nlu.charAt(character, character + 1);
     }
 }
 else if ((whichUpp === false) && (whichNum === true) && (whichLow === false) && (whichSym === true)) {
     for (i = 0; i < passwordLength; i++) { let character = Math.floor(Math.random() * sn.length);
-        newpassword += sn.charAt(character, character + 1);
+        npassword += sn.charAt(character, character + 1);
     }
 }
 else if ((whichSym === false) && (whichNum === false) && (whichLow === true) && (whichUpp === true)) {
     for (i = 0; i < passwordLength; i++) { let character = Math.floor(Math.random() * lu.length);
-        newpassword += lu.charAt(character, character + 1);
+        npassword += lu.charAt(character, character + 1);
     }
 }
 
 else if ((whichSym === true) && (whichNum === true) && (whichLow === true) && (whichUpp === false)) {
     for (i = 0; i < passwordLength; i++) { let character = Math.floor(Math.random() * snl.length);
-        newpassword += snl.charAt(character, character + 1);
+        npassword += snl.charAt(character, character + 1);
     }
 }
 
 else if ((whichSym === false) &&(whichLow === true) && (whichUpp === false)&&(whichNum === true)) {
     for (i = 0; i < passwordLength; i++) { let character = Math.floor(Math.random() * nl.length);
-        newpassword += nl.charAt(character, character + 1);
+        npassword += nl.charAt(character, character + 1);
     }
 }
 else if ((whichUpp === true) && (whichSym === true) && (whichNum === true) && (whichLow=== false)) {
     for (i = 0; i < passwordLength; i++) { let character = Math.floor(Math.random() * snu.length);
-                newpassword += snu.charAt(character, character + 1);
+                npassword+= snu.charAt(character, character + 1);
     }
 }
 else if ((whichSym === true) && (whichNum === false) && (whichLow === true) && (whichUpp === true)) {
     for (i = 0; i < passwordLength; i++) { let character = Math.floor(Math.random() * slu.length);
-        newpassword += slu.charAt(character, character + 1);
+        npassword += slu.charAt(character, character + 1);
     }
 }
 else if ((whichSym === true) && (whichNum === false) && (whichUpp === true)&& (whichLow === false)) {
     for (i = 0; i < passwordLength; i++) {let character = Math.floor(Math.random() * su.length);
-        newpassword += su.charAt(character, character + 1);
+        npassword += su.charAt(character, character + 1);
     }
 }
 else if ((whichSym === true) && (whichNum === false) && (whichLow === true) && (whichUpp === false)) {
     for (i = 0; i < passwordLength; i++) { let character = Math.floor(Math.random() * sl.length);
-        newpassword += sl.charAt(character, character + 1);
+        npassword += sl.charAt(character, character + 1);
     }
 }
 else if ((whichUpp === true) && (whichSym === false) && (whichNum=== true) && (whichLow === false)) {
     for (i = 0; i < passwordLength; i++) { let character = Math.floor(Math.random() * un.length);
-        newpassword += un.charAt(character, character + 1);
+        npassword += un.charAt(character, character + 1);
     }
 }
 
