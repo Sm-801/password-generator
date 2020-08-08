@@ -4,13 +4,19 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  console.log ('password');
+  
+  function generatePassword() {
+       let password = "npassword";
+       return password;
+}
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
 }
 
+
+   
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
@@ -25,6 +31,8 @@ let passwordLength = prompt("Pick a number between 8 and 128");{
 
 let npassword= "";
 
+
+
 //B. Symbols to included in the password 
     //-lowercase letters
   //-uppercase letters
@@ -32,8 +40,6 @@ let npassword= "";
 
 let lowercase= confirm ("wanna include lowercase letters in your password?");
 let whichLow= "abcdefghijklmnopqrstuvwxyz";
-
-
 
 let uppercase= confirm ("wanna include uppercase letters in your password?");
 let whichUpp= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
